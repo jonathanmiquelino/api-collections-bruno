@@ -1,0 +1,26 @@
+info:
+  name: Criar Livro
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5033/livros
+  body:
+    type: json
+    data: |-
+      {
+          "titulo": "Duna",
+          "autor": "Frank Herbert",
+          "anoPublicacao": 1965,
+          "editora": "Editora Aleph",
+          "tema": "Ficção científica, política e ecologia",
+          "isbn": "9788576573135"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
